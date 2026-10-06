@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
   padding: 1rem;
   color: white;
   background-color: black;
@@ -18,7 +20,9 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
-
+h1{
+    font-size: xx-large;
+}
 .roster ul {
   display: grid;
   gap: 1ch;
@@ -47,6 +51,13 @@ main {
   font-size: larger;
 }
 button {
+  display: block;
+  font-weight: bolder;
+  font-size: larger;
+  margin: 1ch auto;
   padding: 1ch;
-  width: 50%;
+  width: 80%;
+}
+.rating{
+    font-size:xx-large;
 }

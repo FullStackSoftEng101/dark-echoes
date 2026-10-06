@@ -20,9 +20,12 @@ export default function App() {
     return (
       <section className="details">
         <h2>{selectedEpisode.title}</h2>
+        <h3>EPISODE #{selectedEpisode.id} </h3>
         <p>Title : {selectedEpisode.title}</p>
         <p>Description : {selectedEpisode.description}</p>
-        {selectedEpisode.isScary && <p>⭐⭐⭐is very Scary!</p>}
+        {selectedEpisode.isScary && (
+          <p className="rating">⭐⭐⭐is very Scary!</p>
+        )}
         <button>WATCH EPISODE</button>
       </section>
     );
@@ -34,7 +37,7 @@ export default function App() {
   function Roster() {
     return (
       <section className="roster">
-        <h2>Roster</h2>
+        <h2>Episodes</h2>
         <ul className="roster">
           {episodes.map((episode) => (
             <li
@@ -46,7 +49,7 @@ export default function App() {
                 setSelectedEpisode(episode);
               }}
             >
-              {episode.title}
+              {episode.title}  | E - {episode.id}
             </li>
           ))}
         </ul>
@@ -58,7 +61,7 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>Episode List</h1>
+        <h1>NETFLIX</h1>
         <main>
           <Roster />
           <EpisodeDetails />
