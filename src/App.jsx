@@ -17,13 +17,23 @@ export default function App() {
         </section>
       );
     }
-      return (
-        <section className="details">
-          <h2>{selectedEpisode.name}</h2>
-          <p>{selectedEpisode.name}</p>
-          <p>{selectedEpisode.description}</p>
-        </section>
-      );
-    }
+    return (
+      <section className="details">
+        <h2>{selectedEpisode.title}</h2>
+        <p>Title:{selectedEpisode.title}</p>
+        <p>Description:{selectedEpisode.description}</p>
+      </section>
+    );
   }
 
+  return (
+    <>
+      <header>
+        <h1>Episode List</h1>
+        <main>
+          <EpisodeDetails />
+        </main>
+      </header>
+    </>
+  );
+}
