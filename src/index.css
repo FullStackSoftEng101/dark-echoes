@@ -46,3 +46,7 @@ main {
   line-height: 3ch;
   font-size: larger;
 }
+button {
+  padding: 1ch;
+  width: 50%;
+}

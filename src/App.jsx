@@ -23,6 +23,7 @@ export default function App() {
         <p>Title : {selectedEpisode.title}</p>
         <p>Description : {selectedEpisode.description}</p>
         {selectedEpisode.isScary && <p>⭐⭐⭐is very Scary!</p>}
+        <button>WATCH EPISODE</button>
       </section>
     );
   }
