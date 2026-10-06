@@ -25,12 +25,32 @@ export default function App() {
       </section>
     );
   }
+  /**
+   * list of episodes
+   */
 
+  function Roster() {
+    return (
+      <section className="roster">
+        <h2>Roster</h2>
+        <ul className="roster">
+          {episodes.map((episode) => (
+            <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
+              {episode.title}
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  }
+
+  //app() mounting
   return (
     <>
       <header>
         <h1>Episode List</h1>
         <main>
+          <Roster />
           <EpisodeDetails />
         </main>
       </header>
