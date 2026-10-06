@@ -8,6 +8,8 @@ export const episodeList = [
   {
     id: 2,
     title: "Whispers in the Night",
+    isScary: true,
+
     description:
       "Strange noises in a small town raise suspicion about the disappearance of a local.",
   },
@@ -38,12 +40,15 @@ export const episodeList = [
   {
     id: 7,
     title: "Echoes of Fear",
+    isScary: true,
     description:
       "A chilling pattern of murders that echo an old crime spree leads to a shocking discovery.",
   },
   {
     id: 8,
     title: "The Final Hour",
+    isScary: true,
+
     description:
       "In the thrilling season finale, every truth comes to light, but the consequences are deadly.",
   },

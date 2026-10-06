@@ -1,4 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
+  padding: 1rem;
   color: white;
   background-color: black;
+}
+main {
+  display: grid;
+  gap: 1ch;
+}
+
+@media (width>=500px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.roster ul {
+  display: grid;
+  gap: 1ch;
+  list-style-type: none;
+  padding: 0.25rem;
+  li.selected {
+    background-color: red;
+    font-size: larger;
+    font-weight: bolder;
+    color: gold;
+    font-style: italic;
+  }
+}
+
+.roster li {
+  padding: 1ch;
+  border: 1px solid white;
+}
+.roster li:hover {
+  cursor: pointer;
+  font-style: italic;
+}
+.details {
+  padding: 0.25rem;
+  line-height: 3ch;
+  font-size: larger;
 }

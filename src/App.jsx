@@ -20,8 +20,9 @@ export default function App() {
     return (
       <section className="details">
         <h2>{selectedEpisode.title}</h2>
-        <p>Title:{selectedEpisode.title}</p>
-        <p>Description:{selectedEpisode.description}</p>
+        <p>Title : {selectedEpisode.title}</p>
+        <p>Description : {selectedEpisode.description}</p>
+        {selectedEpisode.isScary && <p>⭐⭐⭐is very Scary!</p>}
       </section>
     );
   }
@@ -35,7 +36,15 @@ export default function App() {
         <h2>Roster</h2>
         <ul className="roster">
           {episodes.map((episode) => (
-            <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
+            <li
+              key={episode.id}
+              className={
+                selectedEpisode?.id === episode.id ? "selected" : "none"
+              }
+              onClick={() => {
+                setSelectedEpisode(episode);
+              }}
+            >
               {episode.title}
             </li>
           ))}
